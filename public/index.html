@@ -50,9 +50,76 @@
                 <button id="exportDataBtn" class="btn btn-outline">Export Data</button>
             </section>
 
-        <section class="form-section">
-            <h2>Create New Task</h2>
-            <form id="taskForm" class="task-form">
+            <!-- Task Creation Form -->
+            <section class="form-section">
+                <h2>Buat Task Baru</h2>
+                <form id="taskForm" class="task-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="taskTitle">Judul Task *</label>
+                            <input type="text" id="taskTitle" name="title" required placeholder="Masukkan judul task">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taskCategory">Kategori</label>
+                            <select id="taskCategory" name="category">
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="study">Study</option>
+                                <option value="health">Health</option>
+                                <option value="finance">Finance</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskDescription">Deskripsi</label>
+                        <textarea id="taskDescription" name="description" placeholder="Deskripsi task (opsional)" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="taskPriority">Prioritas</label>
+                            <select id="taskPriority" name="priority">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                                <option value="urgent">Urgent</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taskDueDate">Due Date</label>
+                            <input type="date" id="taskDueDate" name="dueDate">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taskEstimatedHours">Estimasi Jam</label>
+                            <input type="number" id="taskEstimatedHours" name="estimatedHours" min="0" step="0.5" placeholder="0">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="taskTags">Tags (pisahkan dengan koma)</label>
+                            <input type="text" id="taskTags" name="tags" placeholder="urgent, meeting, project">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taskAssignee">Assign ke</label>
+                            <select id="taskAssignee" name="assigneeId">
+                                <option value="self">Diri Sendiri</option>
+                                <!-- Options akan diisi dari JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Buat Task</button>
+                    <!-- Update task form section dengan category selector -->
+<section class="form-section">
+    <h2>Create New Task</h2>
+    <form id="taskForm" class="task-form">
         <div class="form-group">
             <label for="taskTitle">Task Title *</label>
             <input type="text" id="taskTitle" name="title" required placeholder="Enter task title">
@@ -87,11 +154,11 @@
         </div>
         
         <button type="submit" class="btn btn-primary">Create Task</button>
-        </form>
-    </section>
+    </form>
+</section>
 
-    <!-- NEW: Category filter section -->
-    <section class="filter-section">
+<!-- NEW: Category filter section -->
+<section class="filter-section">
     <h2>Filter Tasks</h2>
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All Tasks</button>
@@ -112,54 +179,8 @@
             <button class="category-btn" data-category="shopping">Shopping</button>
             <button class="category-btn" data-category="other">Other</button>
         </div>
-            </div>
-            </section>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="taskDescription">Deskripsi</label>
-                        <textarea id="taskDescription" name="description" placeholder="Deskripsi task (opsional)" rows="3"></textarea>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="taskPriority">Prioritas</label>
-                            <select id="taskPriority" name="priority">
-                                <option value="low">Low</option>
-                                <option value="medium" selected>Medium</option>
-                                <option value="high">High</option>
-                                <option value="urgent">Urgent</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="taskDueDate">Due Date</label>
-                            <input type="date" id="taskDueDate" name="dueDate">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="taskEstimatedHours">Estimasi Jam</label>
-                            <input type="number" id="taskEstimatedHours" name="estimatedHours" min="0" step="0.5" placeholder="0">
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="taskTags">Tags</label>
-                            <input type="text" id="taskTags" name="tags" placeholder="urgent, meeting, project">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="taskAssignee">Assign ke</label>
-                            <select id="taskAssignee" name="assigneeId">
-                                <option value="self">Diri Sendiri</option>
-                                <!-- Options akan diisi dari JavaScript -->
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-large">Buat Task</button>
+    </div>
+</section>
                 </form>
             </section>
 
@@ -276,8 +297,6 @@
     <script src="src/controllers/UserController.js"></script>
     <script src="src/controllers/TaskController.js"></script>
     <script src="src/views/TaskView.js"></script>
-    <script src="src/services/TaskService.js"></script>
     <script src="src/app.js"></script>
-
 </body>
 </html>
