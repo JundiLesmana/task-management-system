@@ -3,7 +3,7 @@ const TestDataFactory = require('../helpers/TestDataFactory');
 const TestAssertions = require('../helpers/TestAssertions');
 
 // Import class yang akan di-test
-const User = require('../../src/models/User.js');
+const User = require('../../src/models/User');
 
 describe('User Model', () => {
     describe('User Creation', () => {

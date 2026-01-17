@@ -1,4 +1,6 @@
-const User = require('../models/User');
+/*untuk testing
+const User = require('../../src/models/User');
+*/
 class UserRepository {
     constructor(storageManager) {
         this.storage = storageManager;

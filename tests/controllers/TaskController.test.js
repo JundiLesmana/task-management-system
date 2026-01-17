@@ -1,8 +1,8 @@
 const TestDataFactory = require('../helpers/TestDataFactory');
 const TestAssertions = require('../helpers/TestAssertions');
 const TaskController = require('../../src/controllers/TaskController');
-const TaskRepository = require('../../src/repositories/TaskRepository.js');
-const UserRepository = require('../../src/repositories/UserRepository.js');
+const TaskRepository = require('../../src/repositories/TaskRepository');
+const UserRepository = require('../../src/repositories/UserRepository');
 
 describe('TaskController', () => {
     let taskController;
