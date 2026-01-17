@@ -9,9 +9,9 @@
 const { TestDataFactory, TestAssertions, MockFactory, TestEnvironment } = require('../test-utilities');
 
 // Import all components for integration testing
-const Task = require('../../day2-requirements-design/enhanced-task-model');
-const { TaskRepository } = require('../../day2-requirements-design/task-repository');
-const { TaskController } = require('../../day2-requirements-design/task-controller');
+const Task = require('../../task-management-system/enhanced-task-model');
+const { TaskRepository } = require('../../src/repositories/TaskRepository');
+const { TaskController } = require('../../src/controllers/TaskController');
 
 describe('Task Management Integration Workflows', () => {
     let taskRepository;
